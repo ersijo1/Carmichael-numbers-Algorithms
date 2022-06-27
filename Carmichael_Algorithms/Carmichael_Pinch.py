@@ -8,14 +8,14 @@ import numpy as np
 
 #USEFUL FUNCTIONS
 
-def loadPrimes():
+def loadPrimes(lim):
     #Loads primes from a .txt-file
     #param: lim(float): the sharp estimate (Theorem 10)
     #returns a list of the primes
     primes = []
     with open("primes.txt", "r") as file:
         for row in file:
-            if int(row) < lim:
+            if int(row) <= lim:
                 primes.append(int(row))
     return primes
 
